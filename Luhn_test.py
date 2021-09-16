@@ -15,24 +15,21 @@ def luhn(num):
     dvouciferna_suda = []
     soucet_sudy = 0
 
-    # získání součtu lichým a listu sudých
     for i, cislo in enumerate(obracene_num):
         if (i + 1) % 2 != 0:
             soucet_lichy+=int(cislo)
         else:
             list_sudy.append(int(cislo))
 
-    #získání násobku sudých čísel
     for i, cislo in enumerate(list_sudy):
         list_sudy_krat_dva.append(cislo*2)
 
-#získání dvouciferných čísel
     for i, cislo in enumerate(list_sudy_krat_dva):
         if len(str(cislo)) == 1:
             soucet_sudy+= cislo
         else:
             dvouciferna_suda.append(str(cislo))
-    # součet dvoucifernych sudych a sectení s souctem sudych celkem        
+      
     for i in dvouciferna_suda:
         for l in i:
             soucet_sudy+= int(l)
