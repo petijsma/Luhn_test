@@ -5,7 +5,7 @@ def luhn(num):
     Returns True if the number is valid, returns False if the number is not valid. '''
 
     num = str(num)
-    obracene_num = num[::-1] #obrácení čísla
+    obracene_num = num[::-1]
 
     obracene_num = str(obracene_num)
 
